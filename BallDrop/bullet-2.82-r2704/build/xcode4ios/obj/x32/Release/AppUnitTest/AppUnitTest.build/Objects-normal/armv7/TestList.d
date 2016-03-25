@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/Test/Source/TestList.cpp \
+  ../../Test/Source/TestList.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_qtmul.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_qtmulQV3.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_qtmulV3Q.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_qtdot.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_qtnorm.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_v3dot.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_v3sdiv.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_v3norm.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_v3cross.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_v3triple.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_v3interp.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_v3lerp.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_v3skew.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_v3div.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_v3rotate.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_maxdot.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_mindot.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_dot3.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_3x3transpose.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_3x3transposeTimes.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_3x3timesTranspose.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_3x3mulM.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_3x3mulM1M2.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_3x3mulMV.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_3x3mulVM.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_3x3setRot.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_3x3getRot.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_btDbvt.h \
+  /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../Test/Source/Tests/Test_quat_aos_neon.h \
+  ../../src/LinearMath/btScalar.h

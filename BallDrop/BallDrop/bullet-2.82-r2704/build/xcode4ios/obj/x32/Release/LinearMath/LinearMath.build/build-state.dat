@@ -1,0 +1,280 @@
+TLinearMath
+v6
+r1
+cCheck dependencies
+cCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btAlignedAllocator.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHull.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHull.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHullComputer.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHullComputer.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btGeometryUtil.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btGeometryUtil.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btPolarDecomposition.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btPolarDecomposition.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btQuickprof.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuickprof.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btSerializer.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btSerializer.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btVector3.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib/libLinearMath_xcode4.a normal armv7
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk
+c00000000528384690000000000000110
+t1384350825
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/SDKSettings.plist
+c000000005239ED9E000000000000036B
+t1379528094
+s875
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000526EA6C400000000000001A0
+t1382983364
+s416
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/LinearMath_xcode4.LinkFileList
+c00000000528CDC3F00000000000004F4
+t1384963135
+s1268
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btAlignedAllocator.o
+t1384963136
+s8548
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHull.o
+t1384963136
+s169264
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHullComputer.o
+t1384963136
+s227044
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btGeometryUtil.o
+t1384963136
+s32976
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btPolarDecomposition.o
+t1384963136
+s44052
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btQuickprof.o
+t1384963136
+s33828
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btSerializer.o
+t1384963136
+s22416
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btVector3.o
+t1384963136
+s31336
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/lib/libLinearMath_xcode4.a
+t2
+s0
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.cpp
+c000000004FCFFC3E000000000000113A
+t1339030590
+s4410
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHull.cpp
+c00000000504B9AAA0000000000006E5D
+t1347132074
+s28253
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHullComputer.cpp
+c0000000050CF82C7000000000000DFDA
+t1355776711
+s57306
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btGeometryUtil.cpp
+c00000000499C911300000000000013EE
+t1234997523
+s5102
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btPolarDecomposition.cpp
+c0000000050C232640000000000000A81
+t1354904164
+s2689
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuickprof.cpp
+c000000004E5C58E00000000000004100
+t1314674912
+s16640
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btSerializer.cpp
+c000000005234A20D000000000002CD2E
+t1379181069
+s183598
+
+N/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.cpp
+c000000005267057B0000000000011028
+t1382483323
+s69672
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies2ac4e3bf133db841^d63be4bf133db841^---0#1#1#--18"Check dependencies36"0C405685-CB0B-4431-A45B-29B1345EE1A2-
+
+CCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btAlignedAllocator.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s406655935.892212
+e406655936.042228
+r1
+xCompileC
+xobj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btAlignedAllocator.o
+x/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.cpp
+xnormal
+xarmv7
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.cpp
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btScalar.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.cpp269"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btAlignedAllocator.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler04e3e4bf133db841^74cf0ac0133db841^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.cpp0000000000000000^4139"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btAlignedAllocator.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/rwenderlich/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/bin:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/tools:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/2.6/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/rwenderlich/Projects/AWS/ec2-api-tools-1.4.2.4/bin:/Users/rwenderlich/Projects/AWS/IAMCli-1.2.0/bin:/Users/rwenderlich/Projects/AWS/RDSCli-1.3.003/bin:/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch armv7 -fmessage-length=192 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fno-rtti -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-generated-files.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-own-target-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-all-target-headers.hmap -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-project-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib/include -I../../src -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources/armv7 -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources -F/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib -ffast-math -MMD -MT dependencies -MF /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btAlignedAllocator.d --serialize-diagnostics /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btAlignedAllocator.dia -c /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.cpp -o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btAlignedAllocator.o36"13ED23D9-C875-4794-9D0C-909C7C5835B1-
+b7EA1B125-0302-4947-B383-0E4FF369135C
+
+CCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHull.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHull.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s406655935.892657
+e406655936.491524
+r1
+xCompileC
+xobj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHull.o
+x/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHull.cpp
+xnormal
+xarmv7
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHull.cpp
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHull.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btScalar.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btMinMax.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedObjectArray.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHull.cpp257"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHull.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHull.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compilerd2a8e4bf133db841^aed67dc0133db841^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHull.cpp0000000000000000^4103"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHull.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHull.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/rwenderlich/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/bin:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/tools:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/2.6/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/rwenderlich/Projects/AWS/ec2-api-tools-1.4.2.4/bin:/Users/rwenderlich/Projects/AWS/IAMCli-1.2.0/bin:/Users/rwenderlich/Projects/AWS/RDSCli-1.3.003/bin:/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch armv7 -fmessage-length=192 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fno-rtti -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-generated-files.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-own-target-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-all-target-headers.hmap -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-project-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib/include -I../../src -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources/armv7 -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources -F/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib -ffast-math -MMD -MT dependencies -MF /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHull.d --serialize-diagnostics /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHull.dia -c /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHull.cpp -o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHull.o36"F02BD38B-5A51-472F-BDC1-C15D56261EE8-
+b7EA1B125-0302-4947-B383-0E4FF369135C
+
+CCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHullComputer.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHullComputer.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s406655935.894387
+e406655936.717878
+r1
+xCompileC
+xobj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHullComputer.o
+x/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHullComputer.cpp
+xnormal
+xarmv7
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHullComputer.cpp
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHullComputer.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btScalar.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btMinMax.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedObjectArray.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHullComputer.cpp273"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHullComputer.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHullComputer.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler6422e5bf133db841^dac6b7c0133db841^---0#0#1#-19%DVTDocumentLocation2@106"file:///Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHullComputer.cpp0000000000000000^4151"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHullComputer.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHullComputer.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/rwenderlich/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/bin:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/tools:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/2.6/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/rwenderlich/Projects/AWS/ec2-api-tools-1.4.2.4/bin:/Users/rwenderlich/Projects/AWS/IAMCli-1.2.0/bin:/Users/rwenderlich/Projects/AWS/RDSCli-1.3.003/bin:/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch armv7 -fmessage-length=192 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fno-rtti -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-generated-files.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-own-target-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-all-target-headers.hmap -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-project-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib/include -I../../src -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources/armv7 -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources -F/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib -ffast-math -MMD -MT dependencies -MF /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHullComputer.d --serialize-diagnostics /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHullComputer.dia -c /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btConvexHullComputer.cpp -o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btConvexHullComputer.o36"E0D77704-5C5B-4E22-BDCB-A7D7D9101640-
+b7EA1B125-0302-4947-B383-0E4FF369135C
+
+CCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btGeometryUtil.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btGeometryUtil.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s406655935.895154
+e406655936.182013
+r1
+xCompileC
+xobj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btGeometryUtil.o
+x/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btGeometryUtil.cpp
+xnormal
+xarmv7
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btGeometryUtil.cpp
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btGeometryUtil.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btScalar.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btMinMax.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedObjectArray.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btGeometryUtil.cpp261"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btGeometryUtil.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btGeometryUtil.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler328ee5bf133db841^9a982ec0133db841^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btGeometryUtil.cpp0000000000000000^4115"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btGeometryUtil.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btGeometryUtil.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/rwenderlich/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/bin:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/tools:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/2.6/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/rwenderlich/Projects/AWS/ec2-api-tools-1.4.2.4/bin:/Users/rwenderlich/Projects/AWS/IAMCli-1.2.0/bin:/Users/rwenderlich/Projects/AWS/RDSCli-1.3.003/bin:/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch armv7 -fmessage-length=192 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fno-rtti -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-generated-files.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-own-target-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-all-target-headers.hmap -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-project-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib/include -I../../src -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources/armv7 -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources -F/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib -ffast-math -MMD -MT dependencies -MF /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btGeometryUtil.d --serialize-diagnostics /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btGeometryUtil.dia -c /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btGeometryUtil.cpp -o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btGeometryUtil.o36"19D7F658-5456-46EB-9E8F-EBA2C7787F11-
+b7EA1B125-0302-4947-B383-0E4FF369135C
+
+CCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btPolarDecomposition.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btPolarDecomposition.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s406655935.896204
+e406655936.162468
+r1
+xCompileC
+xobj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btPolarDecomposition.o
+x/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btPolarDecomposition.cpp
+xnormal
+xarmv7
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btPolarDecomposition.cpp
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btPolarDecomposition.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btMatrix3x3.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btScalar.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btMinMax.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuaternion.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuadWord.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btPolarDecomposition.cpp273"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btPolarDecomposition.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btPolarDecomposition.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler6b9ce5bf133db841^929729c0133db841^---0#0#1#-19%DVTDocumentLocation2@106"file:///Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btPolarDecomposition.cpp0000000000000000^4151"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btPolarDecomposition.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btPolarDecomposition.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/rwenderlich/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/bin:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/tools:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/2.6/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/rwenderlich/Projects/AWS/ec2-api-tools-1.4.2.4/bin:/Users/rwenderlich/Projects/AWS/IAMCli-1.2.0/bin:/Users/rwenderlich/Projects/AWS/RDSCli-1.3.003/bin:/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch armv7 -fmessage-length=192 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fno-rtti -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-generated-files.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-own-target-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-all-target-headers.hmap -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-project-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib/include -I../../src -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources/armv7 -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources -F/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib -ffast-math -MMD -MT dependencies -MF /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btPolarDecomposition.d --serialize-diagnostics /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btPolarDecomposition.dia -c /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btPolarDecomposition.cpp -o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btPolarDecomposition.o36"86117BA8-5DC4-4DFC-A5E5-B596406FFAEC-
+b7EA1B125-0302-4947-B383-0E4FF369135C
+
+CCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btQuickprof.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuickprof.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s406655935.896895
+e406655936.150341
+r1
+xCompileC
+xobj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btQuickprof.o
+x/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuickprof.cpp
+xnormal
+xarmv7
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuickprof.cpp
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuickprof.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btScalar.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuickprof.cpp255"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btQuickprof.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuickprof.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler2bd9e5bf133db841^e17c26c0133db841^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuickprof.cpp0000000000000000^4097"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btQuickprof.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuickprof.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/rwenderlich/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/bin:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/tools:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/2.6/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/rwenderlich/Projects/AWS/ec2-api-tools-1.4.2.4/bin:/Users/rwenderlich/Projects/AWS/IAMCli-1.2.0/bin:/Users/rwenderlich/Projects/AWS/RDSCli-1.3.003/bin:/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch armv7 -fmessage-length=192 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fno-rtti -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-generated-files.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-own-target-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-all-target-headers.hmap -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-project-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib/include -I../../src -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources/armv7 -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources -F/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib -ffast-math -MMD -MT dependencies -MF /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btQuickprof.d --serialize-diagnostics /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btQuickprof.dia -c /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btQuickprof.cpp -o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btQuickprof.o36"50B2B2A2-BF58-4885-AC64-6A34A98C0C8A-
+b7EA1B125-0302-4947-B383-0E4FF369135C
+
+CCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btSerializer.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btSerializer.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s406655935.897467
+e406655936.029065
+r1
+xCompileC
+xobj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btSerializer.o
+x/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btSerializer.cpp
+xnormal
+xarmv7
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btSerializer.cpp
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btSerializer.cpp257"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btSerializer.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btSerializer.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler01fae5bf133db841^767107c0133db841^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btSerializer.cpp0000000000000000^4103"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btSerializer.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btSerializer.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/rwenderlich/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/bin:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/tools:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/2.6/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/rwenderlich/Projects/AWS/ec2-api-tools-1.4.2.4/bin:/Users/rwenderlich/Projects/AWS/IAMCli-1.2.0/bin:/Users/rwenderlich/Projects/AWS/RDSCli-1.3.003/bin:/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch armv7 -fmessage-length=192 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fno-rtti -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-generated-files.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-own-target-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-all-target-headers.hmap -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-project-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib/include -I../../src -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources/armv7 -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources -F/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib -ffast-math -MMD -MT dependencies -MF /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btSerializer.d --serialize-diagnostics /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btSerializer.dia -c /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btSerializer.cpp -o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btSerializer.o36"F28D4343-D086-47A2-AEBA-308D26DD48A3-
+b7EA1B125-0302-4947-B383-0E4FF369135C
+
+CCompileC obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btVector3.o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.cpp normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s406655935.897769
+e406655936.224073
+r1
+xCompileC
+xobj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btVector3.o
+x/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.cpp
+xnormal
+xarmv7
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.cpp
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btScalar.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btMinMax.h
+d/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btAlignedAllocator.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.cpp251"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btVector3.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compilere02fe6bf133db841^815d39c0133db841^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.cpp0000000000000000^4085"[1mCompileC[0m obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btVector3.o [1m/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.cpp[0m normal armv7 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/rwenderlich/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/bin:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/tools:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/2.6/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/rwenderlich/Projects/AWS/ec2-api-tools-1.4.2.4/bin:/Users/rwenderlich/Projects/AWS/IAMCli-1.2.0/bin:/Users/rwenderlich/Projects/AWS/RDSCli-1.3.003/bin:/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch armv7 -fmessage-length=192 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fno-rtti -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-generated-files.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-own-target-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-all-target-headers.hmap -iquote /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/LinearMath_xcode4-project-headers.hmap -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib/include -I../../src -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources/armv7 -I/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/DerivedSources -F/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib -ffast-math -MMD -MT dependencies -MF /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btVector3.d --serialize-diagnostics /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btVector3.dia -c /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/src/LinearMath/btVector3.cpp -o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/btVector3.o36"356ACBAB-FAF3-4933-AEA7-50F61FF74A34-
+b7EA1B125-0302-4947-B383-0E4FF369135C
+
+CLibtool /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib/libLinearMath_xcode4.a normal armv7
+s406655936.718710
+e406655936.726356
+r1
+xLibtool
+x/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib/libLinearMath_xcode4.a
+xnormal
+xarmv7
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"[1mLibtool[0m ../../lib/libLinearMath_xcode4.a normal armv761"[1mLibtool[0m ../../lib/libLinearMath_xcode4.a normal armv7b115b8c0133db841^41f3b9c0133db841^---0#0#1#--1754"[1mLibtool[0m ../../lib/libLinearMath_xcode4.a normal armv7    cd /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios    setenv IPHONEOS_DEPLOYMENT_TARGET 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/rwenderlich/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/rwenderlich/.rvm/bin:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/tools:/Users/rwenderlich/Projects/iPhone/Libraries/adt-bundle-mac-x86_64/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/2.6/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/rwenderlich/Projects/AWS/ec2-api-tools-1.4.2.4/bin:/Users/rwenderlich/Projects/AWS/IAMCli-1.2.0/bin:/Users/rwenderlich/Projects/AWS/RDSCli-1.3.003/bin:/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/opt/sm/bin:/opt/sm/pkg/active/bin:/opt/sm/pkg/active/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only armv7 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -L/Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib -filelist /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/obj/x32/Release/LinearMath/LinearMath.build/Objects-normal/armv7/LinearMath_xcode4.LinkFileList -o /Users/rwenderlich/Desktop/BulletBreakout/bullet-2.82-r2704/build/xcode4ios/../../lib/libLinearMath_xcode4.a36"E1E12366-C0A8-430B-BBD3-1C3E0F0AA795-
+b7EA1B125-0302-4947-B383-0E4FF369135C
+

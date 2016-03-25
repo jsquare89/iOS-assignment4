@@ -8,6 +8,8 @@
 
 #import "Ball.h"
 #import "Model/Sphere/sphere.h"
+#include "btBulletDynamicsCommon.h"
+
 
 
 @implementation Ball

@@ -11,6 +11,9 @@
 		922D920E1CA594BC005F3E47 /* GameObject3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D920C1CA594BC005F3E47 /* GameObject3D.m */; };
 		922D92121CA595B5005F3E47 /* Ball.mm in Sources */ = {isa = PBXBuildFile; fileRef = 922D92111CA595B5005F3E47 /* Ball.mm */; };
 		922D92151CA5963E005F3E47 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D92141CA5963E005F3E47 /* Camera.m */; };
+		922D922F1CA5A514005F3E47 /* libBulletCollision_xcode4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 922D92281CA5A50A005F3E47 /* libBulletCollision_xcode4.a */; };
+		922D92301CA5A514005F3E47 /* libBulletDynamics_xcode4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 922D922B1CA5A50A005F3E47 /* libBulletDynamics_xcode4.a */; };
+		922D92311CA5A514005F3E47 /* libLinearMath_xcode4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 922D922E1CA5A50A005F3E47 /* libLinearMath_xcode4.a */; };
 		92B32C991CA48780004653E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B32C981CA48780004653E1 /* main.m */; };
 		92B32C9C1CA48780004653E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B32C9B1CA48780004653E1 /* AppDelegate.m */; };
 		92B32C9E1CA48780004653E1 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 92B32C9D1CA48780004653E1 /* Shader.fsh */; };
@@ -20,6 +23,51 @@
 		92B32CA81CA48780004653E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92B32CA71CA48780004653E1 /* Assets.xcassets */; };
 		92B32CAB1CA48780004653E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B32CA91CA48780004653E1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		922D92271CA5A50A005F3E47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922D921D1CA5A50A005F3E47 /* BulletCollision.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00F910446A7A0F0B35354C36;
+			remoteInfo = BulletCollision;
+		};
+		922D922A1CA5A50A005F3E47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922D92201CA5A50A005F3E47 /* BulletDynamics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6F2F2EFF051123D7327667AF;
+			remoteInfo = BulletDynamics;
+		};
+		922D922D1CA5A50A005F3E47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922D92231CA5A50A005F3E47 /* LinearMath.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 66C4782A307D15BD5BC427CF;
+			remoteInfo = LinearMath;
+		};
+		922D92321CA5A51B005F3E47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922D921D1CA5A50A005F3E47 /* BulletCollision.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 24E07B260B712DB612302E45;
+			remoteInfo = BulletCollision;
+		};
+		922D92341CA5A51B005F3E47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922D92201CA5A50A005F3E47 /* BulletDynamics.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 48DB39D76B7151993E94175B;
+			remoteInfo = BulletDynamics;
+		};
+		922D92361CA5A51B005F3E47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922D92231CA5A50A005F3E47 /* LinearMath.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 36655114319F56045B036258;
+			remoteInfo = LinearMath;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		922D92091CA594BC005F3E47 /* BaseEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEffect.h; sourceTree = "<group>"; };
@@ -32,6 +80,9 @@
 		922D92131CA5963E005F3E47 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 		922D92141CA5963E005F3E47 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
 		922D92161CA59B65005F3E47 /* sphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sphere.h; sourceTree = "<group>"; };
+		922D921D1CA5A50A005F3E47 /* BulletCollision.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BulletCollision.xcodeproj; path = "BallDrop/bullet-2.82-r2704/build/xcode4ios/BulletCollision.xcodeproj"; sourceTree = "<group>"; };
+		922D92201CA5A50A005F3E47 /* BulletDynamics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BulletDynamics.xcodeproj; path = "BallDrop/bullet-2.82-r2704/build/xcode4ios/BulletDynamics.xcodeproj"; sourceTree = "<group>"; };
+		922D92231CA5A50A005F3E47 /* LinearMath.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LinearMath.xcodeproj; path = "BallDrop/bullet-2.82-r2704/build/xcode4ios/LinearMath.xcodeproj"; sourceTree = "<group>"; };
 		92B32C941CA48780004653E1 /* BallDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BallDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B32C981CA48780004653E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92B32C9A1CA48780004653E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +102,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				922D922F1CA5A514005F3E47 /* libBulletCollision_xcode4.a in Frameworks */,
+				922D92301CA5A514005F3E47 /* libBulletDynamics_xcode4.a in Frameworks */,
+				922D92311CA5A514005F3E47 /* libLinearMath_xcode4.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,9 +127,36 @@
 			path = Sphere;
 			sourceTree = "<group>";
 		};
+		922D921E1CA5A50A005F3E47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				922D92281CA5A50A005F3E47 /* libBulletCollision_xcode4.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		922D92211CA5A50A005F3E47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				922D922B1CA5A50A005F3E47 /* libBulletDynamics_xcode4.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		922D92241CA5A50A005F3E47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				922D922E1CA5A50A005F3E47 /* libLinearMath_xcode4.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		92B32C8B1CA48780004653E1 = {
 			isa = PBXGroup;
 			children = (
+				922D921D1CA5A50A005F3E47 /* BulletCollision.xcodeproj */,
+				922D92201CA5A50A005F3E47 /* BulletDynamics.xcodeproj */,
+				922D92231CA5A50A005F3E47 /* LinearMath.xcodeproj */,
 				92B32C961CA48780004653E1 /* BallDrop */,
 				92B32C951CA48780004653E1 /* Products */,
 			);
@@ -139,6 +220,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				922D92331CA5A51B005F3E47 /* PBXTargetDependency */,
+				922D92351CA5A51B005F3E47 /* PBXTargetDependency */,
+				922D92371CA5A51B005F3E47 /* PBXTargetDependency */,
 			);
 			name = BallDrop;
 			productName = BallDrop;
@@ -170,12 +254,50 @@
 			mainGroup = 92B32C8B1CA48780004653E1;
 			productRefGroup = 92B32C951CA48780004653E1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 922D921E1CA5A50A005F3E47 /* Products */;
+					ProjectRef = 922D921D1CA5A50A005F3E47 /* BulletCollision.xcodeproj */;
+				},
+				{
+					ProductGroup = 922D92211CA5A50A005F3E47 /* Products */;
+					ProjectRef = 922D92201CA5A50A005F3E47 /* BulletDynamics.xcodeproj */;
+				},
+				{
+					ProductGroup = 922D92241CA5A50A005F3E47 /* Products */;
+					ProjectRef = 922D92231CA5A50A005F3E47 /* LinearMath.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				92B32C931CA48780004653E1 /* BallDrop */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		922D92281CA5A50A005F3E47 /* libBulletCollision_xcode4.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBulletCollision_xcode4.a;
+			remoteRef = 922D92271CA5A50A005F3E47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		922D922B1CA5A50A005F3E47 /* libBulletDynamics_xcode4.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBulletDynamics_xcode4.a;
+			remoteRef = 922D922A1CA5A50A005F3E47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		922D922E1CA5A50A005F3E47 /* libLinearMath_xcode4.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLinearMath_xcode4.a;
+			remoteRef = 922D922D1CA5A50A005F3E47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		92B32C921CA48780004653E1 /* Resources */ = {
@@ -208,6 +330,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		922D92331CA5A51B005F3E47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BulletCollision;
+			targetProxy = 922D92321CA5A51B005F3E47 /* PBXContainerItemProxy */;
+		};
+		922D92351CA5A51B005F3E47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BulletDynamics;
+			targetProxy = 922D92341CA5A51B005F3E47 /* PBXContainerItemProxy */;
+		};
+		922D92371CA5A51B005F3E47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LinearMath;
+			targetProxy = 922D92361CA5A51B005F3E47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		92B32CA41CA48780004653E1 /* Main.storyboard */ = {
@@ -319,6 +459,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jarredjardine.BallDrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/bullet-2.82-r2704/src";
 			};
 			name = Debug;
 		};
@@ -330,6 +471,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jarredjardine.BallDrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/bullet-2.82-r2704/src";
 			};
 			name = Release;
 		};
