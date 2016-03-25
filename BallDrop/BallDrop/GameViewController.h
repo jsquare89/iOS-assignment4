@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
+#import "BaseEffect.h"
+#import "Ball.h"
+#import "Camera.h"
+
 
 @interface GameViewController : GLKViewController
+{
+    @private BaseEffect* shader;
+}
 
 @end
