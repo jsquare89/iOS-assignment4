@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import <OpenGLES/ES2/glext.h>
+#import "BulletPhysics.h"
 
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
 
@@ -31,7 +32,9 @@ enum
     GLuint _vertexArray;
     GLuint _vertexBuffer;
     
+    BulletPhysics *bp;
     Ball *ball;
+    Plane *plane;
     Camera* camera;
 }
 @property (strong, nonatomic) EAGLContext *context;
@@ -63,6 +66,10 @@ enum
     // Instantiate the ball
     
     ball = [[Ball alloc]init];
+    plane = [[Plane alloc]init];
+    
+    // initialize bullet physics
+    bp = [[BulletPhysics alloc] initWithBall:ball Plane:plane];
     
     
     // Set up Camera
@@ -75,6 +82,12 @@ enum
 - (void)update
 {
     [ball updateTime:self.timeSinceLastUpdate];
+    [plane updateTime:self.timeSinceLastUpdate];
+    
+    if (!bp) return;
+    [bp Update:self.timeSinceLastUpdate Ball:ball];
+    
+
 }
 
 #pragma mark - GLKView and GLKViewController delegate methods
@@ -82,6 +95,7 @@ enum
 {
     [shader clear];
     [shader render:ball];
+    [shader render:plane];
 }
 
 - (void)dealloc

@@ -11,6 +11,7 @@
 #import "BaseEffect.h"
 #import "Ball.h"
 #import "Camera.h"
+#import "Plane.h"
 
 
 @interface GameViewController : GLKViewController
