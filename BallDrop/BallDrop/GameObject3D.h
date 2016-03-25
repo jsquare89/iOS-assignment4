@@ -40,6 +40,7 @@
 -(GLKVector3)GetUp;
 -(GLKVector3)GetRight;
 -(GLKVector3)GetForward;
+-(GLKVector3)GetPosition;
 
 - (void)updateTime:(float)deltaTime;
 

@@ -1,5 +1,5 @@
 //
-//  Ball.h
+//  Plane.h
 //  BallDrop
 //
 //  Created by Jarred Jardine on 2016-03-25.
@@ -8,6 +8,6 @@
 
 #import "GameObject3D.h"
 
-@interface Ball : GameObject3D
--(void)UpdatePositionFall:(float)y;
+@interface Plane : GameObject3D
+
 @end

@@ -109,6 +109,11 @@
     return GLKVector3Normalize(GLKMatrix4MultiplyVector3(transformation, upVector));
 }
 
+-(GLKVector3)GetPosition
+{
+    return worldPosition;
+}
+
 -(GLKMatrix4)GetTranslationMatrix
 {
     return GLKMatrix4MakeTranslation(worldPosition.x, worldPosition.y, worldPosition.z);
