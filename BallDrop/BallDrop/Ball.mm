@@ -10,8 +10,6 @@
 #import "Model/Sphere/sphere.h"
 #include "btBulletDynamicsCommon.h"
 
-
-
 @implementation Ball
 
 - (instancetype)init{
@@ -22,6 +20,10 @@
         
         // Specify Drawing Mode
         renderMode = GL_TRIANGLES;
+        
+
+
+        
     }
     return self;
 }

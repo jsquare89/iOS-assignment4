@@ -213,8 +213,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92B32CAF1CA48780004653E1 /* Build configuration list for PBXNativeTarget "BallDrop" */;
 			buildPhases = (
-				92B32C901CA48780004653E1 /* Sources */,
 				92B32C911CA48780004653E1 /* Frameworks */,
+				92B32C901CA48780004653E1 /* Sources */,
 				92B32C921CA48780004653E1 /* Resources */,
 			);
 			buildRules = (
