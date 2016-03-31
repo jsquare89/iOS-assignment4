@@ -9,6 +9,7 @@
 #ifndef MyGLGame_CBox2D_h
 #define MyGLGame_CBox2D_h
 
+
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 
@@ -21,12 +22,15 @@ enum
 
 @interface CBox2D : NSObject 
 
--(void) HelloWorld;
-
 -(void) LaunchBall;
 -(void) Update:(float)elapsedTime;
 -(void) Render:(int)mvpMatPtr;
 -(void) RegisterHit;
+
+-(void)movePaddle:(CGPoint)location;
+
+
+
 
 @end
 

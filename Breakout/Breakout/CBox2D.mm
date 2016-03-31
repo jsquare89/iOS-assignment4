@@ -18,21 +18,44 @@
 
 #pragma mark - Brick and ball physics parameters
 
-#define BRICK_POS_X			400
-#define BRICK_POS_Y			500
-#define BRICK_WIDTH			100.0f
-#define BRICK_HEIGHT		10.0f
+// Set up brick and ball physics parameters here:
+//   position, width+height (or radius), velocity,
+//   and how long to wait before dropping brick
+
+#define PADDLE_POS_X		400
+#define PADDLE_POS_Y        10
+#define PADDLE_WIDTH        76.0f
+#define PADDLE_HEIGHT       10.0f
+#define BRICK_WIDTH			96.0f
+#define BRICK_HEIGHT		16.0f
 #define BRICK_WAIT			1.5f
 #define BALL_POS_X			400
-#define BALL_POS_Y			50
+#define BALL_POS_Y			40
 #define BALL_RADIUS			15.0f
 #define BALL_VELOCITY		100000.0f
 #define BALL_SPHERE_SEGS	128
+#define BRICK_NUM           8
 
 const float MAX_TIMESTEP = 1.0f/60.0f;
 const int NUM_VEL_ITERATIONS = 10;
 const int NUM_POS_ITERATIONS = 3;
+const b2Vec2 VELOCITY_SCALE = b2Vec2(3,0);
 
+
+struct bodyUserData
+{
+    CBox2D *selfBox;
+    int entityType;
+    int brickTag;
+};
+
+typedef enum
+{
+    PADDLE = 0,
+    BALL,
+    BRICKS,
+    WALLS
+}EntityType;
 
 #pragma mark - Box2D contact listener class
 
@@ -49,8 +72,11 @@ public:
         b2GetPointStates(state1, state2, oldManifold, contact->GetManifold());
         if (state2[0] == b2_addState)
         {
+            // Use contact->GetFixtureA()->GetBody() to get the body
             b2Body* bodyA = contact->GetFixtureA()->GetBody();
             CBox2D *parentObj = (__bridge CBox2D *)(bodyA->GetUserData());
+        
+            // Call RegisterHit (assume CBox2D object is in user data)
             [parentObj RegisterHit];
         }
     }
@@ -68,17 +94,28 @@ public:
     b2BodyDef *groundBodyDef;
     b2Body *groundBody;
     b2PolygonShape *groundBox;
-    b2Body *theBrick, *theBall;
+    b2Body *thePaddle, *theBall;
+    b2Fixture *bottomFixture, *topfixture;
     CContactListener *contactListener;
     
     // GL-specific variables
-    GLuint brickVertexArray, ballVertexArray;
+    // You will need to set up 2 vertex arrays (for brick and ball)
+    GLuint brickVertexArray, ballVertexArray, bricksVertexArray;
     int numBrickVerts, numBallVerts;
     GLKMatrix4 modelViewProjectionMatrix;
-
+    
+    // You will also need some extra variables here
     bool ballHitBrick;
     bool ballLaunched;
     float totalElapsedTime;
+    
+    // Bricks to hit
+    NSMutableArray *mutableBrickArray;
+    int currentTotalBricks;
+    int brickNumHit;
+    int bricksDrawn;
+    
+    float brickDest;
 }
 @end
 
@@ -95,19 +132,20 @@ public:
         groundBodyDef = NULL;
         groundBody = NULL;
         groundBox = NULL;
-
+        
         // For brick & ball sample
         contactListener = new CContactListener();
         world->SetContactListener(contactListener);
         
-        b2BodyDef brickBodyDef;
-        brickBodyDef.type = b2_dynamicBody;
-        brickBodyDef.position.Set(BRICK_POS_X, BRICK_POS_Y);
-        theBrick = world->CreateBody(&brickBodyDef);
-        if (theBrick)
+        // Set up the brick and ball objects for Box2D
+        b2BodyDef paddleBodyDef;
+        paddleBodyDef.type = b2_dynamicBody;
+        paddleBodyDef.position.Set(PADDLE_POS_X, PADDLE_POS_Y);
+        thePaddle = world->CreateBody(&paddleBodyDef);
+        if (thePaddle)
         {
-            theBrick->SetUserData((__bridge void *)self);
-            theBrick->SetAwake(false);
+            thePaddle->SetUserData((__bridge void *)self);
+            thePaddle->SetAwake(false);
             b2PolygonShape dynamicBox;
             dynamicBox.SetAsBox(BRICK_WIDTH/2, BRICK_HEIGHT/2);
             b2FixtureDef fixtureDef;
@@ -115,7 +153,7 @@ public:
             fixtureDef.density = 1.0f;
             fixtureDef.friction = 0.3f;
             fixtureDef.restitution = 1.0f;
-            theBrick->CreateFixture(&fixtureDef);
+            thePaddle->CreateFixture(&fixtureDef);
             
             b2BodyDef ballBodyDef;
             ballBodyDef.type = b2_dynamicBody;
@@ -155,6 +193,8 @@ public:
 
 -(void)Update:(float)elapsedTime
 {
+    // Check here if we need to launch the ball
+    //  and if so, use ApplyLinearImpulse() and SetActive(true)
     if (ballLaunched)
     {
         theBall->ApplyLinearImpulse(b2Vec2(0, BALL_VELOCITY), theBall->GetPosition(), true);
@@ -165,20 +205,25 @@ public:
         ballLaunched = false;
     }
     
+    /*
+    // Check if it is time yet to drop the brick, and if so
+    //  call SetAwake()
     totalElapsedTime += elapsedTime;
-    if ((totalElapsedTime > BRICK_WAIT) && theBrick)
-        theBrick->SetAwake(true);
+    if ((totalElapsedTime > BRICK_WAIT) && thePaddle)
+        thePaddle->SetAwake(true);
     
+    // If the last collision test was positive,
+    //  stop the ball and destroy the brick
     if (ballHitBrick)
     {
-        theBall->SetLinearVelocity(b2Vec2(0, 0));
-        theBall->SetAngularVelocity(0);
-        theBall->SetActive(false);
-        world->DestroyBody(theBrick);
-        theBrick = NULL;
+        //theBall->SetLinearVelocity(b2Vec2(0, 0));
+        //theBall->SetAngularVelocity(0);
+        //theBall->SetActive(false);
+        world->DestroyBody(thePaddle);
+        thePaddle = NULL;
         ballHitBrick = false;
     }
-
+    */
     if (world)
     {
         while (elapsedTime >= MAX_TIMESTEP)
@@ -192,11 +237,13 @@ public:
             world->Step(elapsedTime, NUM_VEL_ITERATIONS, NUM_POS_ITERATIONS);
         }
     }
-
-
+    
+    
+    // Set up vertex arrays and buffers for the brick and ball here
+    
     glEnable(GL_DEPTH_TEST);
-
-    if (theBrick)
+    
+    if (thePaddle)
     {
         glGenVertexArraysOES(1, &brickVertexArray);
         glBindVertexArrayOES(brickVertexArray);
@@ -207,35 +254,35 @@ public:
         GLfloat vertPos[18];
         int k = 0;
         numBrickVerts = 0;
-        vertPos[k++] = theBrick->GetPosition().x - BRICK_WIDTH/2;
-        vertPos[k++] = theBrick->GetPosition().y + BRICK_HEIGHT/2;
+        vertPos[k++] = thePaddle->GetPosition().x - PADDLE_WIDTH/2;
+        vertPos[k++] = thePaddle->GetPosition().y + PADDLE_HEIGHT/2;
         vertPos[k++] = 10;
         numBrickVerts++;
-        vertPos[k++] = theBrick->GetPosition().x + BRICK_WIDTH/2;
-        vertPos[k++] = theBrick->GetPosition().y + BRICK_HEIGHT/2;
+        vertPos[k++] = thePaddle->GetPosition().x + PADDLE_WIDTH/2;
+        vertPos[k++] = thePaddle->GetPosition().y + PADDLE_HEIGHT/2;
         vertPos[k++] = 10;
         numBrickVerts++;
-        vertPos[k++] = theBrick->GetPosition().x + BRICK_WIDTH/2;
-        vertPos[k++] = theBrick->GetPosition().y - BRICK_HEIGHT/2;
+        vertPos[k++] = thePaddle->GetPosition().x + PADDLE_WIDTH/2;
+        vertPos[k++] = thePaddle->GetPosition().y - PADDLE_HEIGHT/2;
         vertPos[k++] = 10;
         numBrickVerts++;
-        vertPos[k++] = theBrick->GetPosition().x - BRICK_WIDTH/2;
-        vertPos[k++] = theBrick->GetPosition().y + BRICK_HEIGHT/2;
+        vertPos[k++] = thePaddle->GetPosition().x - PADDLE_WIDTH/2;
+        vertPos[k++] = thePaddle->GetPosition().y + PADDLE_HEIGHT/2;
         vertPos[k++] = 10;
         numBrickVerts++;
-        vertPos[k++] = theBrick->GetPosition().x + BRICK_WIDTH/2;
-        vertPos[k++] = theBrick->GetPosition().y - BRICK_HEIGHT/2;
+        vertPos[k++] = thePaddle->GetPosition().x + PADDLE_WIDTH/2;
+        vertPos[k++] = thePaddle->GetPosition().y - PADDLE_HEIGHT/2;
         vertPos[k++] = 10;
         numBrickVerts++;
-        vertPos[k++] = theBrick->GetPosition().x - BRICK_WIDTH/2;
-        vertPos[k++] = theBrick->GetPosition().y - BRICK_HEIGHT/2;
+        vertPos[k++] = thePaddle->GetPosition().x - PADDLE_WIDTH/2;
+        vertPos[k++] = thePaddle->GetPosition().y - PADDLE_HEIGHT/2;
         vertPos[k++] = 10;
         numBrickVerts++;
         glBufferData(GL_ARRAY_BUFFER, sizeof(vertPos), vertPos, GL_STATIC_DRAW);
         glEnableVertexAttribArray(VertexAttribPosition);
         glVertexAttribPointer(VertexAttribPosition, 3, GL_FLOAT, GL_FALSE, 3*sizeof(GLfloat), BUFFER_OFFSET(0));
         
-        GLfloat vertCol[18];
+        GLfloat vertCol[numBrickVerts*3];
         for (k=0; k<numBrickVerts*3; k+=3)
         {
             vertCol[k] = 1.0f;
@@ -249,7 +296,7 @@ public:
         
         glBindVertexArrayOES(0);
     }
-
+    
     
     if (theBall)
     {
@@ -291,7 +338,8 @@ public:
         
         glBindVertexArrayOES(0);
     }
-
+    
+    // For now assume simple ortho projection since it's only 2D
     GLKMatrix4 projectionMatrix = GLKMatrix4MakeOrtho(0, 800, 0, 600, -10, 100);
     GLKMatrix4 modelViewMatrix = GLKMatrix4Identity;
     modelViewProjectionMatrix = GLKMatrix4Multiply(projectionMatrix, modelViewMatrix);
@@ -303,9 +351,9 @@ public:
     if (theBall)
         printf("Ball: (%5.3f,%5.3f)\t",
                theBall->GetPosition().x, theBall->GetPosition().y);
-    if (theBrick)
+    if (thePaddle)
         printf("Brick: (%5.3f,%5.3f)",
-               theBrick->GetPosition().x, theBrick->GetPosition().y);
+               thePaddle->GetPosition().x, thePaddle->GetPosition().y);
     printf("\n");
 #endif
     
@@ -313,9 +361,12 @@ public:
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     glUniformMatrix4fv(mvpMatPtr, 1, 0, modelViewProjectionMatrix.m);
-
+    
+    // Bind each vertex array and call glDrawArrays
+    //  for each of the ball and brick
+    
     glBindVertexArrayOES(brickVertexArray);
-    if (theBrick && numBrickVerts > 0)
+    if (thePaddle && numBrickVerts > 0)
         glDrawArrays(GL_TRIANGLES, 0, numBrickVerts);
     
     glBindVertexArrayOES(ballVertexArray);
@@ -325,69 +376,165 @@ public:
 
 -(void)RegisterHit
 {
+    // Set some flag here for processing later...
     ballHitBrick = true;
 }
 
 -(void)LaunchBall
 {
-    ballLaunched = true;
-}
-
-
-
--(void)HelloWorld
-{
-    groundBodyDef = new b2BodyDef;
-    groundBodyDef->position.Set(0.0f, -10.0f);
-    groundBody = world->CreateBody(groundBodyDef);
-    groundBox = new b2PolygonShape;
-    groundBox->SetAsBox(50.0f, 10.0f);
-    
-    groundBody->CreateFixture(groundBox, 0.0f);
-    
-    // Define the dynamic body. We set its position and call the body factory.
-    b2BodyDef bodyDef;
-    bodyDef.type = b2_dynamicBody;
-    bodyDef.position.Set(0.0f, 4.0f);
-    b2Body* body = world->CreateBody(&bodyDef);
-    
-    // Define another box shape for our dynamic body.
-    b2PolygonShape dynamicBox;
-    dynamicBox.SetAsBox(1.0f, 1.0f);
-    
-    // Define the dynamic body fixture.
-    b2FixtureDef fixtureDef;
-    fixtureDef.shape = &dynamicBox;
-    
-    // Set the box density to be non-zero, so it will be dynamic.
-    fixtureDef.density = 1.0f;
-    
-    // Override the default friction.
-    fixtureDef.friction = 0.3f;
-    
-    // Add the shape to the body.
-    body->CreateFixture(&fixtureDef);
-    
-    // Prepare for simulation. Typically we use a time step of 1/60 of a
-    // second (60Hz) and 10 iterations. This provides a high quality simulation
-    // in most game scenarios.
-    float32 timeStep = 1.0f / 60.0f;
-    int32 velocityIterations = 6;
-    int32 positionIterations = 2;
-    
-    // This is our little game loop.
-    for (int32 i = 0; i < 60; ++i)
-    {
-        // Instruct the world to perform a single step of simulation.
-        // It is generally best to keep the time step and iterations fixed.
-        world->Step(timeStep, velocityIterations, positionIterations);
-        
-        // Now print the position and angle of the body.
-        b2Vec2 position = body->GetPosition();
-        float32 angle = body->GetAngle();
-        
-        printf("%4.2f %4.2f %4.2f\n", position.x, position.y, angle);
+    if(!ballLaunched){
+        ballLaunched = true;
+        float angle = GLKMathDegreesToRadians(30);
+        theBall->ApplyLinearImpulse(b2Vec2(sin(angle) * BALL_VELOCITY, cos(angle) * BALL_VELOCITY), theBall->GetPosition(), true);
+        theBall->SetActive(true);
     }
 }
+
+-(void)movePaddle:(CGPoint)location
+{
+
+}
+
+-(void) GenerateBricks
+{
+    currentTotalBricks = BRICK_NUM;
+    for(int i = 0; i < BRICK_NUM; i++)
+    {
+        static int padding=100;
+        
+        int xOffset = padding+ BRICK_WIDTH / 2 + ((BRICK_WIDTH +10)*i);
+        
+        // Create block body
+        b2BodyDef blockBodyDef;
+        blockBodyDef.type = b2_staticBody;
+        blockBodyDef.position.Set(xOffset, 350);
+        b2Body *blockBody = world->CreateBody(&blockBodyDef);
+        
+        // Set user data with some custom info
+        bodyUserData* myStruct = new bodyUserData;
+        myStruct->selfBox = self;
+        myStruct->entityType = BRICKS;
+        myStruct->brickTag = i;
+        blockBody->SetUserData(myStruct);
+        
+        // Create block shape
+        b2PolygonShape blockShape;
+        blockShape.SetAsBox(BRICK_WIDTH / 2, BRICK_HEIGHT / 2);
+        
+        // Create shape definition and add to body
+        b2FixtureDef blockShapeDef;
+        blockShapeDef.shape = &blockShape;
+        blockShapeDef.density = 10.0;
+        blockShapeDef.friction = 0.0;
+        blockShapeDef.restitution = 0.1f;
+        blockBody->CreateFixture(&blockShapeDef);
+        NSValue *bodyVal = [NSValue valueWithPointer:blockBody];
+        [mutableBrickArray addObject:bodyVal];
+    }
+}
+
+-(void)ResetBall{
+    b2BodyDef ballBodyDef;
+    ballBodyDef.type = b2_dynamicBody;
+    ballBodyDef.position.Set(BALL_POS_X, BALL_POS_Y);
+    theBall = world->CreateBody(&ballBodyDef);
+    if (theBall)
+    {
+        theBall->SetUserData((__bridge void *)self);
+        theBall->SetAwake(false);
+        b2CircleShape circle;
+        circle.m_p.Set(0, 0);
+        circle.m_radius = BALL_RADIUS;
+        b2FixtureDef circleFixtureDef;
+        circleFixtureDef.shape = &circle;
+        circleFixtureDef.density = 1.0f;
+        circleFixtureDef.friction = 0.3f;
+        circleFixtureDef.restitution = 1.0f;
+        theBall->CreateFixture(&circleFixtureDef);
+    }
+    ballLaunched = false;
+}
+
+-(void)CreateBrick:(b2Vec2)brick
+{
+    GLfloat vertPos[36];
+    int k = 0;
+    numBrickVerts = 0;
+    vertPos[k++] = brick.x - BRICK_WIDTH/2;
+    vertPos[k++] = brick.y + BRICK_HEIGHT/2;
+    vertPos[k++] = 10;
+    vertPos[k++] = 1.0f;
+    vertPos[k++] = 0.0f;
+    vertPos[k++] = 0.0f;
+    numBrickVerts++;
+    vertPos[k++] = brick.x + BRICK_WIDTH/2;
+    vertPos[k++] = brick.y + BRICK_HEIGHT/2;
+    vertPos[k++] = 10;
+    vertPos[k++] = 1.0f;
+    vertPos[k++] = 0.0f;
+    vertPos[k++] = 0.0f;
+    numBrickVerts++;
+    vertPos[k++] = brick.x + BRICK_WIDTH/2;
+    vertPos[k++] = brick.y - BRICK_HEIGHT/2;
+    vertPos[k++] = 10;
+    vertPos[k++] = 1.0f;
+    vertPos[k++] = 0.0f;
+    vertPos[k++] = 0.0f;
+    numBrickVerts++;
+    vertPos[k++] = brick.x - BRICK_WIDTH/2;
+    vertPos[k++] = brick.y + BRICK_HEIGHT/2;
+    vertPos[k++] = 10;
+    vertPos[k++] = 1.0f;
+    vertPos[k++] = 0.0f;
+    vertPos[k++] = 0.0f;
+    numBrickVerts++;
+    vertPos[k++] = brick.x + BRICK_WIDTH/2;
+    vertPos[k++] = brick.y - BRICK_HEIGHT/2;
+    vertPos[k++] = 10;
+    vertPos[k++] = 1.0f;
+    vertPos[k++] = 0.0f;
+    vertPos[k++] = 0.0f;
+    numBrickVerts++;
+    vertPos[k++] = brick.x - BRICK_WIDTH/2;
+    vertPos[k++] = brick.y - BRICK_HEIGHT/2;
+    vertPos[k++] = 10;
+    vertPos[k++] = 1.0f;
+    vertPos[k++] = 0.0f;
+    vertPos[k++] = 0.0f;
+    numBrickVerts++;
+    glBufferSubData(GL_ARRAY_BUFFER, bricksDrawn * sizeof(vertPos), sizeof(vertPos), vertPos);
+    bricksDrawn++;
+}
+-(void)UpdateBricks
+{
+    if((b2Body*) [[mutableBrickArray objectAtIndex:0] pointerValue])
+    {
+        
+        glGenVertexArraysOES(1, &bricksVertexArray);
+        glBindVertexArrayOES(bricksVertexArray);
+        
+        GLuint vertexBuffers;
+        glGenBuffers(1, &vertexBuffers);
+        glBindBuffer(GL_ARRAY_BUFFER, vertexBuffers);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat[36]) * currentTotalBricks, 0, GL_STATIC_DRAW);
+        
+        glEnableVertexAttribArray(VertexAttribPosition);
+        glVertexAttribPointer(VertexAttribPosition, 3, GL_FLOAT, GL_FALSE, 6*sizeof(GLfloat), BUFFER_OFFSET(0));
+        glEnableVertexAttribArray(VertexAttribColor);
+        glVertexAttribPointer(VertexAttribColor, 3, GL_FLOAT, GL_FALSE, 6*sizeof(GLfloat), BUFFER_OFFSET(12));
+        
+        for (int i = 0; i < currentTotalBricks; i++)
+        {
+            b2Body *theBody = (b2Body*) [[mutableBrickArray objectAtIndex:i] pointerValue];
+            [self CreateBrick:theBody->GetPosition()];
+        }
+        bricksDrawn = 0;
+        
+        glBindVertexArrayOES(0);
+    }
+}
+
+
+
 
 @end
