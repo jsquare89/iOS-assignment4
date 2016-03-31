@@ -272,12 +272,15 @@
 - (IBAction)singleTap:(id)sender
 {
     CGPoint p = [sender locationInView:self.view];
-    [box2d LaunchBall:CGPointMake(p.x, 800-p.y)];
+    CGPoint point = CGPointMake(p.x*800/self.view.frame.size.width, (1-(p.y/self.view.frame.size.height))*800);
+    //NSLog(@"%3f, %3f", point.x, point.y);
+    [box2d LaunchBall:point];
 }
 
 -(IBAction)drag:(id)sender
 {
     CGPoint p = [sender locationInView:self.view];
-    [box2d LaunchBall:CGPointMake(p.x, 800-p.y)];
+    CGPoint point = CGPointMake(p.x*800/self.view.frame.size.width, (1-(p.y/self.view.frame.size.height))*800);
+    [box2d LaunchBall:point];
 }
 @end
