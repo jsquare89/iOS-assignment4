@@ -26,8 +26,8 @@
 #define PADDLE_POS_Y        10
 #define PADDLE_WIDTH        76.0f
 #define PADDLE_HEIGHT       10.0f
-#define BRICK_WIDTH			96.0f
-#define BRICK_HEIGHT		16.0f
+#define BRICK_WIDTH			80.0f
+#define BRICK_HEIGHT		30.0f
 #define BRICK_WAIT			1.5f
 #define BALL_POS_X			400
 #define BALL_POS_Y			40
@@ -39,23 +39,14 @@
 const float MAX_TIMESTEP = 1.0f/60.0f;
 const int NUM_VEL_ITERATIONS = 10;
 const int NUM_POS_ITERATIONS = 3;
-const b2Vec2 VELOCITY_SCALE = b2Vec2(3,0);
 
 
 struct bodyUserData
 {
     CBox2D *selfBox;
-    int entityType;
+    int entityType; // 1 for brick
     int brickTag;
 };
-
-typedef enum
-{
-    PADDLE = 0,
-    BALL,
-    BRICKS,
-    WALLS
-}EntityType;
 
 #pragma mark - Box2D contact listener class
 
@@ -72,12 +63,14 @@ public:
         b2GetPointStates(state1, state2, oldManifold, contact->GetManifold());
         if (state2[0] == b2_addState)
         {
-            // Use contact->GetFixtureA()->GetBody() to get the body
             b2Body* bodyA = contact->GetFixtureA()->GetBody();
-            CBox2D *parentObj = (__bridge CBox2D *)(bodyA->GetUserData());
-        
+            
+            bodyUserData* udStruct = (bodyUserData*)bodyA->GetUserData();
+            CBox2D *parentObj = (CBox2D*)udStruct->selfBox;
+            //CBox2D *parentObj = (__bridge CBox2D *)(bodyA->GetUserData());
             // Call RegisterHit (assume CBox2D object is in user data)
-            [parentObj RegisterHit];
+            if (udStruct->entityType == 1)
+                [parentObj RegisterHit:udStruct->brickTag];
         }
     }
     void PostSolve(b2Contact* contact, const b2ContactImpulse* impulse) {};
@@ -115,7 +108,7 @@ public:
     int brickNumHit;
     int bricksDrawn;
     
-    float brickDest;
+    float paddleDest;
 }
 @end
 
@@ -125,7 +118,7 @@ public:
 {
     self = [super init];
     if (self) {
-        gravity = new b2Vec2(0.0f, -10.0f);
+        gravity = new b2Vec2(0.0f, 0.0f);
         world = new b2World(*gravity);
         
         // For HelloWorld
@@ -136,6 +129,7 @@ public:
         // For brick & ball sample
         contactListener = new CContactListener();
         world->SetContactListener(contactListener);
+        mutableBrickArray = [[NSMutableArray alloc]init];
         
         // Set up the brick and ball objects for Box2D
         b2BodyDef paddleBodyDef;
@@ -168,12 +162,15 @@ public:
                 circle.m_radius = BALL_RADIUS;
                 b2FixtureDef circleFixtureDef;
                 circleFixtureDef.shape = &circle;
-                circleFixtureDef.density = 1.0f;
-                circleFixtureDef.friction = 0.3f;
+                circleFixtureDef.density = 0.001f;
+                circleFixtureDef.friction = 0.2f;
                 circleFixtureDef.restitution = 1.0f;
                 theBall->CreateFixture(&circleFixtureDef);
             }
         }
+        
+        [self GenerateBricks];
+        [self UpdateBricks];
         
         totalElapsedTime = 0;
         ballHitBrick = false;
@@ -193,6 +190,7 @@ public:
 
 -(void)Update:(float)elapsedTime
 {
+    /*
     // Check here if we need to launch the ball
     //  and if so, use ApplyLinearImpulse() and SetActive(true)
     if (ballLaunched)
@@ -205,7 +203,7 @@ public:
         ballLaunched = false;
     }
     
-    /*
+    
     // Check if it is time yet to drop the brick, and if so
     //  call SetAwake()
     totalElapsedTime += elapsedTime;
@@ -224,6 +222,34 @@ public:
         ballHitBrick = false;
     }
     */
+    // If the last collision test was positive,
+    //  stop the ball and destroy the brick
+    if (ballHitBrick)
+    {
+        int i = 0;
+        for(NSValue *bodyValue in mutableBrickArray)
+        {
+            b2Body *body = (b2Body*)[bodyValue pointerValue];
+            bodyUserData* udStruct = (bodyUserData*)body->GetUserData();
+            if (udStruct->brickTag == brickNumHit)
+            {
+                world->DestroyBody(body);
+                currentTotalBricks--;
+                [mutableBrickArray removeObjectAtIndex:i];
+                if (currentTotalBricks == 0)
+                {
+                    [self ResetBall];
+                    [self GenerateBricks];
+                }
+                [self UpdateBricks];
+                break;
+            }
+            i++;
+        }
+        ballHitBrick = false;
+    }
+    
+    
     if (world)
     {
         while (elapsedTime >= MAX_TIMESTEP)
@@ -245,6 +271,14 @@ public:
     
     if (thePaddle)
     {
+        if(thePaddle->GetPosition().x < PADDLE_WIDTH/2){
+            thePaddle->ApplyLinearImpulse(b2Vec2(BALL_VELOCITY,0), thePaddle->GetPosition(), true);
+        }
+        else if (thePaddle->GetPosition().x > (800 - PADDLE_WIDTH/2))
+        {
+            thePaddle->ApplyLinearImpulse(b2Vec2(-BALL_VELOCITY,0), thePaddle->GetPosition(), true);
+        }
+        
         glGenVertexArraysOES(1, &brickVertexArray);
         glBindVertexArrayOES(brickVertexArray);
         
@@ -300,6 +334,21 @@ public:
     
     if (theBall)
     {
+        //reset ball if below the paddle
+        if(theBall->GetPosition().y < 1){
+            [self ResetBall];
+        }
+        if(theBall->GetPosition().y>585){
+            b2Vec2 ballV = theBall->GetLinearVelocity();
+            theBall->SetLinearVelocity(b2Vec2(ballV.x, -ballV.y));
+        }
+        
+        //keep ball in bounds
+        if(theBall->GetPosition().x< 15 || theBall->GetPosition().x> 785){
+            b2Vec2 ballV = theBall->GetLinearVelocity();
+            theBall->SetLinearVelocity(b2Vec2(-ballV.x, ballV.y));
+        }
+        
         glGenVertexArraysOES(1, &ballVertexArray);
         glBindVertexArrayOES(ballVertexArray);
         
@@ -372,12 +421,15 @@ public:
     glBindVertexArrayOES(ballVertexArray);
     if (theBall && numBallVerts > 0)
         glDrawArrays(GL_TRIANGLE_FAN, 0, numBallVerts);
+    
+    glBindVertexArrayOES(bricksVertexArray);
+    glDrawArrays(GL_TRIANGLES, 0, 6 * currentTotalBricks);
 }
 
--(void)RegisterHit
+-(void)RegisterHit:(int)brickCount
 {
-    // Set some flag here for processing later...
     ballHitBrick = true;
+    brickNumHit = brickCount;
 }
 
 -(void)LaunchBall
@@ -390,9 +442,14 @@ public:
     }
 }
 
--(void)movePaddle:(CGPoint)location
+-(void)movePaddle:(CGPoint)pos
 {
-
+    if (pos.x < thePaddle->GetPosition().x) {
+        thePaddle->ApplyLinearImpulse(b2Vec2(-BALL_VELOCITY,0), thePaddle->GetPosition(), true);
+    }else{
+        thePaddle->ApplyLinearImpulse(b2Vec2(BALL_VELOCITY,0), thePaddle->GetPosition(), true);
+    }
+    paddleDest = pos.x;
 }
 
 -(void) GenerateBricks
@@ -400,7 +457,7 @@ public:
     currentTotalBricks = BRICK_NUM;
     for(int i = 0; i < BRICK_NUM; i++)
     {
-        static int padding=100;
+        static int padding=50;
         
         int xOffset = padding+ BRICK_WIDTH / 2 + ((BRICK_WIDTH +10)*i);
         
@@ -413,7 +470,7 @@ public:
         // Set user data with some custom info
         bodyUserData* myStruct = new bodyUserData;
         myStruct->selfBox = self;
-        myStruct->entityType = BRICKS;
+        myStruct->entityType = 1;
         myStruct->brickTag = i;
         blockBody->SetUserData(myStruct);
         
@@ -447,7 +504,7 @@ public:
         circle.m_radius = BALL_RADIUS;
         b2FixtureDef circleFixtureDef;
         circleFixtureDef.shape = &circle;
-        circleFixtureDef.density = 1.0f;
+        circleFixtureDef.density = 0.0001f;
         circleFixtureDef.friction = 0.3f;
         circleFixtureDef.restitution = 1.0f;
         theBall->CreateFixture(&circleFixtureDef);
@@ -533,8 +590,6 @@ public:
         glBindVertexArrayOES(0);
     }
 }
-
-
 
 
 @end

@@ -25,9 +25,9 @@ enum
 -(void) LaunchBall;
 -(void) Update:(float)elapsedTime;
 -(void) Render:(int)mvpMatPtr;
--(void) RegisterHit;
+-(void)RegisterHit:(int)brickCount;
 
--(void)movePaddle:(CGPoint)location;
+-(void)movePaddle:(CGPoint)pos;
 
 
 

@@ -275,6 +275,6 @@
 -(IBAction)drag:(id)sender
 {
     CGPoint p = [sender locationInView:self.view];
-    [box2d movePaddle:p view:self.view.bounds.size];
+    [box2d movePaddle:p];
 }
 @end
