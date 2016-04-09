@@ -365,7 +365,7 @@ public:
         
     }
 
-    GLKMatrix4 projectionMatrix = GLKMatrix4MakeOrtho(0, 800, 0, 800, -10, 100);
+    GLKMatrix4 projectionMatrix = GLKMatrix4MakeOrtho(0, 800, 0, 600, -10, 100);
     GLKMatrix4 modelViewMatrix = GLKMatrix4Identity;
     modelViewProjectionMatrix = GLKMatrix4Multiply(projectionMatrix, modelViewMatrix);
 }

@@ -48,8 +48,13 @@
     
     [self setupGL];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+    [self.view addGestureRecognizer:tap];
+    UIPanGestureRecognizer *drag = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(drag:)];
+    [self.view addGestureRecognizer:drag];
+    
+    
     box2d = [[CBox2D alloc] init];
-    [box2d HelloWorld];
 }
 
 - (void)dealloc
@@ -262,8 +267,14 @@
     return YES;
 }
 
-- (IBAction)singleTap:(id)sender
+- (IBAction)tap:(id)sender
 {
     [box2d LaunchBall];
+}
+
+-(IBAction)drag:(id)sender
+{
+    CGPoint p = [sender locationInView:self.view];
+    [box2d movePaddle:p];
 }
 @end

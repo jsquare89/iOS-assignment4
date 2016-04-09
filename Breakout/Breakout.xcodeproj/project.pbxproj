@@ -676,6 +676,7 @@
 				92EE20FA1CA5BEB400DD5D4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
