@@ -436,6 +436,7 @@ public:
         theBall->ApplyLinearImpulse(b2Vec2(sin(angle) * BALL_VELOCITY, cos(angle) * BALL_VELOCITY), theBall->GetPosition(), true);
         theBall->SetActive(true);
     }else{
+        //NSLog(@"%f, %f", theBrick->GetPosition().y, pos.y);
         if(pos.x <= 400){
             if (pos.y < theBrick->GetPosition().y) {
                 theBrick->ApplyLinearImpulse(b2Vec2(0,-BALL_VELOCITY), theBrick->GetPosition(), true);
